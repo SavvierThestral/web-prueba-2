@@ -110,11 +110,22 @@
     ]
   }
   </script>
-  <script src="https://cdn.tailwindcss.com"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://images.unsplash.com">
+  <!-- Preload logo (LCP element) -->
+  <link rel="preload" as="image" href="logo_almagro-removebg-preview-1-1.webp">
+  <!-- Preload hero image — mobile vs desktop -->
+  <link rel="preload" as="image" href="https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?w=800&q=75&fm=webp" media="(max-width: 767px)">
+  <link rel="preload" as="image" href="https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?w=1280&q=82&fm=webp" media="(min-width: 768px)">
+  <!-- Google Fonts — no bloqueante (preload + onload) -->
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet"></noscript>
   <style>
+    /* Fallback font-display mientras cargan Google Fonts */
+    @font-face { font-family:'Cormorant Garamond'; font-display:swap; }
+    @font-face { font-family:'DM Sans'; font-display:swap; }
+
     :root {
       --brand: #949a00;
       --brand-dark: #6b6f00;
@@ -561,7 +572,7 @@
 <nav style="position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(14,14,6,0.95);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid rgba(148,154,0,0.14);">
   <div style="max-width:1200px;margin:0 auto;padding:0 28px;display:flex;align-items:center;justify-content:space-between;height:72px;">
     <a href="#inicio" style="display:flex;align-items:center;text-decoration:none;flex-shrink:0;">
-      <img src="logo_almagro-removebg-preview-1-1.webp" alt="Grupo Almagro" style="height:42px;width:auto;">
+      <img src="logo_almagro-removebg-preview-1-1.webp" alt="Grupo Almagro" width="120" height="42" style="height:42px;width:auto;" fetchpriority="high">
     </a>
     <div class="nav-links-desktop" style="display:flex;align-items:center;gap:32px;">
 
@@ -683,8 +694,15 @@
 <section id="inicio" style="position:relative;min-height:100vh;display:flex;align-items:center;overflow:hidden;">
   <!-- BG image + overlays -->
   <div style="position:absolute;inset:0;z-index:0;">
-    <img src="https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?w=1600&q=85" alt=""
-         style="width:100%;height:100%;object-fit:cover;object-position:center;">
+    <picture>
+      <source media="(max-width: 480px)"  srcset="https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?w=640&q=75&fm=webp">
+      <source media="(max-width: 768px)"  srcset="https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?w=960&q=80&fm=webp">
+      <source media="(max-width: 1280px)" srcset="https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?w=1280&q=82&fm=webp">
+      <img src="https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?w=1600&q=85&fm=webp" alt=""
+           width="1600" height="900"
+           style="width:100%;height:100%;object-fit:cover;object-position:center;"
+           fetchpriority="high" decoding="sync">
+    </picture>
     <div style="position:absolute;inset:0;background:linear-gradient(110deg,rgba(14,14,6,0.92) 0%,rgba(14,14,6,0.62) 55%,rgba(14,14,6,0.25) 100%);"></div>
     <div style="position:absolute;inset:0;background:radial-gradient(ellipse at 15% 60%,rgba(148,154,0,0.14) 0%,transparent 55%);"></div>
   </div>
@@ -996,7 +1014,9 @@
     <!-- Image -->
     <div style="border-radius:24px;overflow:hidden;position:relative;height:520px;">
       <img src="ChatGPT-Image-6-feb-2026-10_32_24-768x1152.webp" alt="Tratamiento capilar Grupo Almagro"
-           style="width:100%;height:100%;object-fit:cover;object-position:center;display:block;">
+           width="768" height="1152"
+           style="width:100%;height:100%;object-fit:cover;object-position:center;display:block;"
+           loading="lazy" decoding="async">
       <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(14,14,6,0.55) 0%,transparent 55%);"></div>
       <div style="position:absolute;inset:0;background:rgba(148,154,0,0.07);mix-blend-mode:multiply;"></div>
     </div>
@@ -1054,7 +1074,9 @@
       <!-- Card 1 -->
       <div class="blog-card">
         <div class="blog-img-wrap">
-          <img src="corte_degradado_grupo_almagro-768x1024.webp" alt="Barbería en Málaga Centro" style="object-position:center top;">
+          <img src="corte_degradado_grupo_almagro-768x1024.webp" alt="Barbería en Málaga Centro"
+               width="768" height="1024" style="object-position:center top;"
+               loading="lazy" decoding="async">
         </div>
         <div style="padding:24px 24px 28px;">
           <p style="color:var(--brand);font-size:0.78rem;font-weight:500;text-decoration:underline;text-underline-offset:2px;margin-bottom:10px;">2 de marzo de 2026</p>
@@ -1067,7 +1089,9 @@
       <!-- Card 2 -->
       <div class="blog-card">
         <div class="blog-img-wrap">
-          <img src="ChatGPT-Image-6-feb-2026-10_32_24-768x1152.webp" alt="Tratamientos capilares en Málaga" style="object-position:center;">
+          <img src="ChatGPT-Image-6-feb-2026-10_32_24-768x1152.webp" alt="Tratamientos capilares en Málaga"
+               width="768" height="1152" style="object-position:center;"
+               loading="lazy" decoding="async">
         </div>
         <div style="padding:24px 24px 28px;">
           <p style="color:var(--brand);font-size:0.78rem;font-weight:500;text-decoration:underline;text-underline-offset:2px;margin-bottom:10px;">6 de febrero de 2026</p>
@@ -1080,7 +1104,9 @@
       <!-- Card 3 -->
       <div class="blog-card">
         <div class="blog-img-wrap">
-          <img src="ChatGPT-Image-24-ene-2026-21_44_34-768x1152.webp" alt="Curso de Dermapen en Málaga" style="object-position:center top;">
+          <img src="ChatGPT-Image-24-ene-2026-21_44_34-768x1152.webp" alt="Curso de Dermapen en Málaga"
+               width="768" height="1152" style="object-position:center top;"
+               loading="lazy" decoding="async">
         </div>
         <div style="padding:24px 24px 28px;">
           <p style="color:var(--brand);font-size:0.78rem;font-weight:500;text-decoration:underline;text-underline-offset:2px;margin-bottom:10px;">24 de enero de 2026</p>
@@ -1177,7 +1203,7 @@
 
       <!-- Brand -->
       <div>
-        <img src="logo_almagro-removebg-preview-1-1.webp" alt="Grupo Almagro" style="height:44px;width:auto;margin-bottom:20px;display:block;">
+        <img src="logo_almagro-removebg-preview-1-1.webp" alt="Grupo Almagro" width="124" height="44" style="height:44px;width:auto;margin-bottom:20px;display:block;" loading="lazy">
         <p style="color:rgba(255,255,255,0.42);font-size:0.84rem;line-height:1.72;max-width:240px;margin-bottom:24px;">Barbería, peluquería y estética profesional en el centro de Málaga.</p>
         <div style="display:flex;gap:10px;">
           <a href="#" aria-label="Instagram" style="width:36px;height:36px;border-radius:10px;background:rgba(148,154,0,0.14);border:1px solid rgba(148,154,0,0.22);display:flex;align-items:center;justify-content:center;transition:background 0.2s;" onmouseover="this.style.background='rgba(148,154,0,0.28)'" onmouseout="this.style.background='rgba(148,154,0,0.14)'">
