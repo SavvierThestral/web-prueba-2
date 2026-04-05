@@ -1,0 +1,20 @@
+Options -Indexes
+RewriteEngine On
+
+# Redirigir www a no-www (opcional, descomenta si lo necesitás)
+# RewriteCond %{HTTP_HOST} ^www\.grupoalmagro\.com [NC]
+# RewriteRule ^(.*)$ https://grupoalmagro.com/$1 [R=301,L]
+
+# Forzar HTTPS
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
+
+# Redirects 301 — URLs antiguas de WordPress a nuevas páginas HTML
+RewriteRule ^peluqueria-de-caballeros/?$ /barberia.html [R=301,L]
+RewriteRule ^peluqueria/?$ /peluqueria.html [R=301,L]
+RewriteRule ^estetica/?$ /estetica.html [R=301,L]
+RewriteRule ^blog/?$ /blog.html [R=301,L]
+# Tienda — no redirigir, tiene tienda propia en ese dominio
+
+# Página 404 personalizada (opcional)
+# ErrorDocument 404 /404.html
