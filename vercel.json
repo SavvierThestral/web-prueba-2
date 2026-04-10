@@ -6,6 +6,8 @@
     { "src": "/barberia",   "dest": "/barberia.html"   },
     { "src": "/estetica",   "dest": "/estetica.html"   },
     { "src": "/blog",       "dest": "/blog.html"       },
-    { "src": "/contacto",   "dest": "/index.html"      }
+    { "src": "/contacto",               "dest": "/index.html"                    },
+    { "src": "/tratamientos-destacados", "dest": "/tratamientos-destacados.html" },
+    { "src": "/tratamientos",            "dest": "/tratamientos-destacados.html" }
   ]
 }
