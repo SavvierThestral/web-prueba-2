@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Botox Capilar en Málaga | Grupo Almagro Málaga</title>
+<meta name="description" content="Tratamiento de botox capilar en Málaga para cabello seco, dañado o con frizz. Resultados inmediatos en Grupo Almagro.">
+<link rel="canonical" href="https://www.grupoalmagro.com/tratamiento-botox-capilar/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root { --brand: #949a00; --brand-dark: #6b6f00; --ink: #0e0e06; --ink-light: #555; --bg: #fafaf5; --white: #fff; --radius: 16px; }
+  html { font-size: 16px; scroll-behavior: smooth; }
+  body { font-family: 'DM Sans', sans-serif; background: var(--bg); color: var(--ink); line-height: 1.7; }
+  a { color: inherit; text-decoration: none; }
+  img { max-width: 100%; height: auto; display: block; }
+  .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+
+  /* HEADER */
+  .site-header { position: sticky; top: 0; z-index: 100; background: rgba(250,250,245,0.95); backdrop-filter: blur(8px); border-bottom: 1px solid rgba(0,0,0,0.07); }
+  .header-inner { display: flex; align-items: center; justify-content: space-between; height: 68px; }
+  .logo-img { height: 44px; width: auto; }
+  .nav-list { display: flex; align-items: center; gap: 32px; list-style: none; }
+  .nav-link { font-size: 0.9rem; font-weight: 500; letter-spacing: 0.01em; transition: color 0.2s; }
+  .nav-link:hover { color: var(--brand); }
+  .nav-cta { background: var(--brand); color: var(--white) !important; padding: 10px 22px; border-radius: 100px; font-weight: 600; }
+  .nav-cta:hover { background: var(--brand-dark); }
+  .nav-toggle { display: none; flex-direction: column; gap: 5px; background: none; border: none; cursor: pointer; padding: 8px; }
+  .nav-toggle span { display: block; width: 24px; height: 2px; background: var(--ink); transition: transform 0.3s, opacity 0.3s; }
+  @media (max-width: 768px) {
+    .nav-toggle { display: flex; }
+    .primary-nav { display: none; position: absolute; top: 68px; left: 0; right: 0; background: var(--bg); border-bottom: 1px solid rgba(0,0,0,0.1); padding: 24px; }
+    .primary-nav.open { display: block; }
+    .nav-list { flex-direction: column; align-items: flex-start; gap: 16px; }
+  }
+
+  /* HERO */
+  .svc-hero { position: relative; min-height: 420px; display: flex; align-items: flex-end; overflow: hidden; }
+  .svc-hero-img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+  .svc-hero-overlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(14,14,6,0.78) 0%, rgba(14,14,6,0.25) 60%, rgba(14,14,6,0.1) 100%); }
+  .svc-hero-content { position: relative; z-index: 2; padding: 60px 0; }
+  .svc-hero-eyebrow { display: inline-block; font-size: 0.75rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--brand); background: rgba(148,154,0,0.15); border: 1px solid rgba(148,154,0,0.35); border-radius: 100px; padding: 6px 16px; margin-bottom: 16px; }
+  .svc-hero h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem, 5vw, 3.2rem); font-weight: 700; color: var(--white); line-height: 1.15; margin-bottom: 14px; }
+  .svc-hero-lead { font-size: 1.05rem; color: rgba(255,255,255,0.82); max-width: 560px; }
+
+  /* BREADCRUMB */
+  .breadcrumb { padding: 16px 0; font-size: 0.82rem; color: var(--ink-light); }
+  .breadcrumb a { color: var(--brand); }
+  .breadcrumb span { margin: 0 6px; }
+
+  /* SECTION */
+  .svc-section { padding: 72px 0; }
+  .svc-section + .svc-section { border-top: 1px solid rgba(0,0,0,0.07); }
+  .section-label { font-size: 0.74rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--brand); margin-bottom: 10px; }
+  .section-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(1.7rem, 3.5vw, 2.4rem); font-weight: 700; line-height: 1.2; margin-bottom: 20px; }
+  .section-lead { font-size: 1rem; color: var(--ink-light); max-width: 640px; line-height: 1.75; margin-bottom: 40px; }
+
+  /* PRICE TABLE */
+  .price-table { width: 100%; border-collapse: collapse; background: var(--white); border-radius: var(--radius); overflow: hidden; box-shadow: 0 2px 16px rgba(0,0,0,0.06); }
+  .price-table th { background: var(--ink); color: var(--white); font-size: 0.8rem; letter-spacing: 0.08em; text-transform: uppercase; padding: 14px 20px; text-align: left; }
+  .price-table td { padding: 14px 20px; border-bottom: 1px solid rgba(0,0,0,0.05); font-size: 0.95rem; }
+  .price-table tr:last-child td { border-bottom: none; }
+  .price-table tr:nth-child(even) td { background: rgba(148,154,0,0.03); }
+  .price-badge { display: inline-block; background: rgba(148,154,0,0.1); color: var(--brand-dark); font-weight: 700; border-radius: 100px; padding: 4px 14px; font-size: 0.9rem; }
+
+  /* CHECKLIST */
+  .check-list { list-style: none; display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 12px; }
+  .check-list li { display: flex; align-items: flex-start; gap: 12px; background: var(--white); border-radius: 12px; padding: 14px 18px; font-size: 0.93rem; box-shadow: 0 1px 6px rgba(0,0,0,0.05); }
+  .check-list li::before { content: "✓"; color: var(--brand); font-weight: 700; font-size: 1rem; flex-shrink: 0; margin-top: 1px; }
+
+  /* RELATED */
+  .related-section { background: var(--ink); padding: 64px 0; }
+  .related-section .section-title { color: var(--white); }
+  .related-section .section-label { color: var(--brand); }
+  .related-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 16px; margin-top: 32px; }
+  .related-card { background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.1); border-radius: 14px; padding: 24px 20px; transition: background 0.25s, transform 0.25s; }
+  .related-card:hover { background: rgba(255,255,255,0.11); transform: translateY(-3px); }
+  .related-card-icon { font-size: 1.6rem; margin-bottom: 12px; }
+  .related-card-name { font-size: 0.95rem; font-weight: 600; color: var(--white); margin-bottom: 6px; }
+  .related-card-link { font-size: 0.8rem; color: var(--brand); font-weight: 600; letter-spacing: 0.04em; }
+
+  /* CTA */
+  .cta-section { background: var(--brand); padding: 72px 0; text-align: center; }
+  .cta-section h2 { font-family: 'Cormorant Garamond', serif; font-size: clamp(1.8rem, 4vw, 2.8rem); font-weight: 700; color: var(--white); margin-bottom: 14px; }
+  .cta-section p { color: rgba(255,255,255,0.85); font-size: 1rem; max-width: 500px; margin: 0 auto 32px; }
+  .btn-white { display: inline-block; background: var(--white); color: var(--brand-dark); font-weight: 700; padding: 16px 40px; border-radius: 100px; font-size: 1rem; transition: transform 0.2s, box-shadow 0.2s; }
+  .btn-white:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(0,0,0,0.2); }
+
+  /* FOOTER */
+  .site-footer { background: var(--ink); color: rgba(255,255,255,0.7); padding: 60px 0 0; }
+  .footer-inner { display: grid; grid-template-columns: 2fr 1fr 1fr 1.5fr; gap: 40px; padding-bottom: 48px; }
+  .footer-brand p { font-size: 0.88rem; margin-top: 14px; line-height: 1.6; }
+  .footer-links h4, .footer-contact h4 { font-size: 0.78rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--white); margin-bottom: 16px; }
+  .footer-links ul { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+  .footer-links a { font-size: 0.9rem; transition: color 0.2s; }
+  .footer-links a:hover { color: var(--brand); }
+  .footer-contact p { font-size: 0.88rem; margin-bottom: 6px; }
+  .footer-contact a { color: var(--brand); }
+  .footer-bottom { border-top: 1px solid rgba(255,255,255,0.08); padding: 20px 0; text-align: center; font-size: 0.8rem; }
+  @media (max-width: 768px) {
+    .footer-inner { grid-template-columns: 1fr 1fr; }
+    .footer-brand { grid-column: 1/-1; }
+    .check-list { grid-template-columns: 1fr; }
+    .related-grid { grid-template-columns: 1fr 1fr; }
+    .price-table { font-size: 0.85rem; }
+  }
+</style>
+</head>
+<body>
+
+<header class="site-header" id="site-header">
+  <div class="container header-inner">
+    <a href="/" class="logo-link" aria-label="Grupo Almagro — Inicio">
+      <img src="/logo_almagro-removebg-preview-1-1.webp" alt="Grupo Almagro" class="logo-img" width="124" height="44" fetchpriority="high">
+    </a>
+    <button class="nav-toggle" id="nav-toggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="primary-nav">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="primary-nav" id="primary-nav" aria-label="Navegación principal">
+      <ul class="nav-list">
+        <li><a href="/peluqueria" class="nav-link">Peluquería</a></li>
+        <li><a href="/barberia" class="nav-link">Barbería</a></li>
+        <li><a href="/estetica" class="nav-link">Estética</a></li>
+        <li><a href="/tratamientos-destacados" class="nav-link">Tratamientos</a></li>
+        <li><a href="/blog" class="nav-link">Blog</a></li>
+        <li><a href="/contacto" class="nav-link nav-cta">Reservar cita</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+<section class="svc-hero">
+  <img src="/ChatGPT-Image-6-feb-2026-10_32_24-768x1152.webp" alt="Botox Capilar en Málaga" class="svc-hero-img" fetchpriority="high">
+  <div class="svc-hero-overlay"></div>
+  <div class="svc-hero-content container">
+    <span class="svc-hero-eyebrow">Peluquería · Tratamiento Intensivo</span>
+    <h1>Botox Capilar en Málaga</h1>
+    <p class="svc-hero-lead">Recupera la suavidad, el brillo y la vitalidad de tu cabello con el tratamiento de botox capilar. Resultados visibles desde la primera sesión.</p>
+  </div>
+</section>
+<div class="breadcrumb container">
+  <a href="/">Inicio</a><span>/</span>
+  <a href="/peluqueria">Peluquería</a><span>/</span>
+  Botox Capilar en Málaga
+</div>
+
+<main>
+  <section class="svc-section">
+    <div class="container">
+      <div class="section-label">Sobre el servicio</div>
+      <h2 class="section-title">¿En qué consiste?</h2>
+      <div class="section-lead"><p>El botox capilar es un tratamiento de reconstrucción intensiva que rellena las porosidades del cabello con proteínas y aminoácidos. Ideal para cabellos dañados por el color, el calor o los procesos químicos. No alisa permanentemente; acondiciona y sella la cutícula para un resultado suave y brillante.</p></div>
+      <h3 class="section-title" style="font-size:1.6rem;margin-bottom:24px;">Precios orientativos</h3>
+      <div style="overflow-x:auto">
+        <table class="price-table">
+          <thead><tr><th>Servicio</th><th>Precio</th></tr></thead>
+          <tbody><tr><td>Botox capilar cabello corto</td><td><span class="price-badge">Desde 55 €</span></td></tr>
+<tr><td>Botox capilar cabello medio</td><td><span class="price-badge">Desde 70 €</span></td></tr>
+<tr><td>Botox capilar cabello largo</td><td><span class="price-badge">Desde 85 €</span></td></tr>
+<tr><td>Botox + tratamiento nutritivo</td><td><span class="price-badge">Desde 95 €</span></td></tr></tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <section class="svc-section" style="background:var(--white)">
+    <div class="container">
+      <div class="section-label">¿Por qué elegirnos?</div>
+      <h2 class="section-title">Lo que incluye</h2>
+      <ul class="check-list"><li>Rellena la fibra capilar dañada</li>
+<li>Elimina el frizz y el encrespamiento</li>
+<li>Aporta brillo inmediato</li>
+<li>Sin formaldehído ni tóxicos</li>
+<li>Apto para cabello teñido</li>
+<li>Resultados duran hasta 3 meses</li></ul>
+    </div>
+  </section>
+</main>
+
+<section class="related-section">
+  <div class="container">
+    <div class="section-label">También te puede interesar</div>
+    <h2 class="section-title">Otros servicios de peluquería</h2>
+    <div class="related-grid"><a href="/tratamientos-capilares-en-malaga-con-diagnostico-personalizado" class="related-card">
+    <div class="related-card-icon">💆‍♀️</div>
+    <div class="related-card-name">Tratamientos Capilares</div>
+    <div class="related-card-link">Ver servicio →</div>
+  </a>
+<a href="/alisado-permanente-en-malaga-grupo-almagro" class="related-card">
+    <div class="related-card-icon">〰️</div>
+    <div class="related-card-name">Alisado Permanente</div>
+    <div class="related-card-link">Ver servicio →</div>
+  </a>
+<a href="/tinte-sin-amoniaco-en-malaga-coloracion-inoa-y-biopygma" class="related-card">
+    <div class="related-card-icon">🎨</div>
+    <div class="related-card-name">Tinte sin Amoníaco</div>
+    <div class="related-card-link">Ver servicio →</div>
+  </a>
+<a href="/mechas-balayage-en-malaga-grupo-almagro" class="related-card">
+    <div class="related-card-icon">🌟</div>
+    <div class="related-card-name">Mechas y Balayage</div>
+    <div class="related-card-link">Ver servicio →</div>
+  </a></div>
+  </div>
+</section>
+<section class="cta-section">
+  <div class="container">
+    <h2>¿Lista para transformar tu cabello?</h2>
+    <p>Reserva tu cita en Grupo Almagro y descubre la diferencia.</p>
+    <a href="/contacto" class="btn-white">Reservar cita ahora</a>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <div class="footer-brand">
+      <img src="/logo_almagro-removebg-preview-1-1.webp" alt="Grupo Almagro" width="100" height="36" loading="lazy">
+      <p>Peluquería &amp; Estética en Málaga desde 2002.</p>
+    </div>
+    <div class="footer-links">
+      <h4>Servicios</h4>
+      <ul>
+        <li><a href="/peluqueria">Peluquería</a></li>
+        <li><a href="/barberia">Barbería</a></li>
+        <li><a href="/estetica">Estética</a></li>
+        <li><a href="/tratamientos-destacados">Tratamientos</a></li>
+      </ul>
+    </div>
+    <div class="footer-links">
+      <h4>Empresa</h4>
+      <ul>
+        <li><a href="/blog">Blog</a></li>
+        <li><a href="/contacto">Contacto</a></li>
+      </ul>
+    </div>
+    <div class="footer-contact">
+      <h4>Visítanos</h4>
+      <p>C/ Ejemplo 12, Málaga</p>
+      <p><a href="tel:+34600000000">+34 600 000 000</a></p>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="container">
+      <p>&copy; 2025 Grupo Almagro. Todos los derechos reservados.</p>
+    </div>
+  </div>
+</footer>
+<script>
+(function(){
+  var btn=document.getElementById('nav-toggle');
+  var nav=document.getElementById('primary-nav');
+  if(btn&&nav){btn.addEventListener('click',function(){var o=nav.classList.toggle('open');btn.setAttribute('aria-expanded',o);})}
+})();
+</script>
+</body>
+</html>

@@ -2,12 +2,22 @@
   "cleanUrls": true,
   "trailingSlash": false,
   "routes": [
-    { "src": "/peluqueria", "dest": "/peluqueria.html" },
-    { "src": "/barberia",   "dest": "/barberia.html"   },
-    { "src": "/estetica",   "dest": "/estetica.html"   },
-    { "src": "/blog",       "dest": "/blog.html"       },
-    { "src": "/contacto",               "dest": "/index.html"                    },
-    { "src": "/tratamientos-destacados", "dest": "/tratamientos-destacados.html" },
-    { "src": "/tratamientos",            "dest": "/tratamientos-destacados.html" }
+    { "src": "/peluqueria",                                                       "dest": "/peluqueria.html" },
+    { "src": "/peluqueria-en-malaga",                                             "dest": "/peluqueria.html" },
+    { "src": "/barberia",                                                          "dest": "/barberia.html" },
+    { "src": "/estetica",                                                          "dest": "/estetica.html" },
+    { "src": "/blog",                                                              "dest": "/blog.html" },
+    { "src": "/contacto",                                                          "dest": "/index.html" },
+    { "src": "/tratamientos-destacados",                                           "dest": "/tratamientos-destacados.html" },
+    { "src": "/tratamientos",                                                      "dest": "/tratamientos-destacados.html" },
+    { "src": "/tratamientos-destacados-en-malaga-balayage-dermapen-laser-y-cejas", "dest": "/tratamientos-destacados.html" },
+    { "src": "/mechas-balayage-en-malaga-grupo-almagro",                           "dest": "/mechas-balayage-en-malaga-grupo-almagro.html" },
+    { "src": "/corte-de-mujer-en-malaga-peluqueria-femenina-y-estilistas",         "dest": "/corte-de-mujer-en-malaga-peluqueria-femenina-y-estilistas.html" },
+    { "src": "/tinte-sin-amoniaco-en-malaga-coloracion-inoa-y-biopygma",           "dest": "/tinte-sin-amoniaco-en-malaga-coloracion-inoa-y-biopygma.html" },
+    { "src": "/peinados-en-malaga",                                                "dest": "/peinados-en-malaga.html" },
+    { "src": "/tratamientos-capilares-en-malaga-con-diagnostico-personalizado",    "dest": "/tratamientos-capilares-en-malaga-con-diagnostico-personalizado.html" },
+    { "src": "/tratamiento-botox-capilar",                                         "dest": "/tratamiento-botox-capilar.html" },
+    { "src": "/alisado-permanente-en-malaga-grupo-almagro",                        "dest": "/alisado-permanente-en-malaga-grupo-almagro.html" },
+    { "src": "/recogidos-de-novia-en-malaga",                                      "dest": "/recogidos-de-novia-en-malaga.html" }
   ]
 }
