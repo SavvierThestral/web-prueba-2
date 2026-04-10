@@ -1,0 +1,11 @@
+{
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "routes": [
+    { "src": "/peluqueria", "dest": "/peluqueria.html" },
+    { "src": "/barberia",   "dest": "/barberia.html"   },
+    { "src": "/estetica",   "dest": "/estetica.html"   },
+    { "src": "/blog",       "dest": "/blog.html"       },
+    { "src": "/contacto",   "dest": "/index.html"      }
+  ]
+}
