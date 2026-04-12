@@ -228,6 +228,10 @@
     .acc-checkmarks { display: flex; flex-direction: column; gap: 4px; }
     .acc-check { color: var(--ink-soft); font-size: 0.83rem; display: flex; align-items: center; gap: 6px; }
     .acc-check::before { content: '✔'; color: var(--brand); font-size: 0.78rem; flex-shrink: 0; }
+  .svc-page-card { background:#fff; border:1px solid rgba(0,0,0,0.07); border-radius:20px; padding:28px 24px; box-shadow:0 2px 14px rgba(148,154,0,0.06); transition:transform 0.3s cubic-bezier(0.34,1.56,0.64,1),box-shadow 0.3s; height:100%; }
+  .svc-page-card:hover { transform:translateY(-5px); box-shadow:0 8px 28px rgba(148,154,0,0.14); }
+  .svc-page-icon { font-size:2rem; margin-bottom:16px; }
+  .svc-page-link { color:var(--brand); font-size:0.84rem; font-weight:600; }
   </style>
 </head>
 <body>
@@ -311,291 +315,28 @@
       <p style="color:var(--ink-soft);font-size:0.95rem;line-height:1.75;max-width:500px;margin:0 auto;">Uñas, cejas y facial. Resultados visibles y sin prisa.</p>
     </div>
 
-    <div class="svc-card">
-      <div style="display:flex;align-items:center;gap:14px;margin-bottom:28px;padding-bottom:20px;border-bottom:1px solid rgba(0,0,0,0.06);">
-        <div style="width:44px;height:44px;background:var(--brand-xlight);border-radius:12px;flex-shrink:0;display:flex;align-items:center;justify-content:center;">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#949a00" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a5 5 0 0 1 5 5c0 5-5 9-5 9S7 12 7 7a5 5 0 0 1 5-5z"/></svg>
-        </div>
-        <div>
-          <p style="font-family:'Cormorant Garamond',serif;font-size:1.3rem;font-weight:700;color:var(--ink);line-height:1.2;">Estética</p>
-          <p style="color:var(--ink-soft);font-size:0.83rem;margin-top:2px;">Uñas, cejas y facial. Resultados visibles y sin prisa.</p>
-        </div>
-      </div>
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:24px;max-width:1100px;margin:0 auto;">
 
-      <!-- Manicura -->
-      <div style="margin-bottom:8px;">
-        <button class="svc-accordion-toggle" data-body="acc-manicura-body" aria-expanded="false"><span class="acc-label">Manicura</span><span class="acc-arrow">→</span></button>
-        <div class="svc-accordion-body" id="acc-manicura-body"><div class="svc-accordion-body-inner">
-          <p class="acc-title">💅 Manicura en Málaga</p>
-          <p class="acc-desc">Uñas cuidadas, elegantes y duraderas con técnicas profesionales adaptadas a tu estilo.</p>
-          <div class="acc-checkmarks" style="margin-bottom:14px;">
-            <span class="acc-check">Acabado impecable y resistente</span>
-            <span class="acc-check">Productos de alta calidad</span>
-            <span class="acc-check">Diseños personalizados</span>
-            <span class="acc-check">Resultados duraderos</span>
-          </div>
-          <p style="color:var(--ink);font-size:0.82rem;font-weight:700;margin-bottom:8px;">Servicios:</p>
-          <ul style="list-style:none;margin:0 0 12px;display:flex;flex-direction:column;gap:5px;">
-            <li style="font-size:0.83rem;color:var(--ink-soft);"><strong style="color:var(--ink);">Semipermanente</strong> → 2–3 semanas de duración</li>
-            <li style="font-size:0.83rem;color:var(--ink-soft);"><strong style="color:var(--ink);">Uñas acrílicas</strong> → más longitud y resistencia</li>
-            <li style="font-size:0.83rem;color:var(--ink-soft);"><strong style="color:var(--ink);">Acrygel</strong> → natural + ligero + duradero</li>
-            <li style="font-size:0.83rem;color:var(--ink-soft);"><strong style="color:var(--ink);">Manicura clásica / spa</strong></li>
-          </ul>
-          <p style="font-size:0.82rem;color:var(--brand-dark);font-style:italic;margin-bottom:4px;">👤 Ideal para manos cuidadas sin retoques constantes</p>
-          <p style="font-size:0.81rem;color:var(--ink-soft);">⏱ 30–70 min según servicio</p>
-        </div></div>
-      </div>
-
-      <!-- Pedicura -->
-      <div style="margin-bottom:8px;">
-        <button class="svc-accordion-toggle" data-body="acc-pedicura-body" aria-expanded="false"><span class="acc-label">Pedicura</span><span class="acc-arrow">→</span></button>
-        <div class="svc-accordion-body" id="acc-pedicura-body"><div class="svc-accordion-body-inner">
-          <p class="acc-title">🦶 Pedicura en Málaga</p>
-          <p class="acc-desc">Pies cuidados, suaves y con uñas impecables durante semanas, con tratamientos adaptados a cada necesidad.</p>
-          <div class="acc-checkmarks" style="margin-bottom:14px;">
-            <span class="acc-check">Acabado duradero y brillante</span>
-            <span class="acc-check">Eliminación de durezas y cuidado completo</span>
-            <span class="acc-check">Hidratación y suavidad desde la primera sesión</span>
-            <span class="acc-check">Ambiente relajante y profesional</span>
-          </div>
-          <p style="color:var(--ink);font-size:0.82rem;font-weight:700;margin-bottom:8px;">Servicios:</p>
-          <ul style="list-style:none;margin:0 0 12px;display:flex;flex-direction:column;gap:5px;">
-            <li style="font-size:0.83rem;color:var(--ink-soft);"><strong style="color:var(--ink);">Semipermanente</strong> → 3–4 semanas de duración</li>
-            <li style="font-size:0.83rem;color:var(--ink-soft);"><strong style="color:var(--ink);">Pedicura spa</strong> → exfoliación + hidratación + masaje</li>
-            <li style="font-size:0.83rem;color:var(--ink-soft);"><strong style="color:var(--ink);">Pedicura clásica</strong> → mantenimiento básico</li>
-          </ul>
-          <p style="font-size:0.82rem;color:var(--brand-dark);font-style:italic;margin-bottom:4px;">👤 Ideal para pies secos, cansados o con durezas</p>
-          <p style="font-size:0.81rem;color:var(--ink-soft);">⏱ 40–75 min según servicio</p>
-        </div></div>
-      </div>
-
-      <!-- Manicura y Pedicura Semipermanente -->
-      <div style="margin-bottom:8px;">
-        <button class="svc-accordion-toggle" data-body="acc-mani-pedi-semi-body" aria-expanded="false"><span class="acc-label">Manicura y Pedicura semipermanente</span><span class="acc-arrow">→</span></button>
-        <div class="svc-accordion-body" id="acc-mani-pedi-semi-body"><div class="svc-accordion-body-inner">
-          <p class="acc-title">💅 Uñas semipermanentes en Málaga</p>
-          <p class="acc-desc">Manicura y pedicura con acabado premium, brillo duradero y máxima precisión para unas uñas impecables durante semanas.</p>
-          <div class="acc-checkmarks" style="margin-bottom:14px;">
-            <span class="acc-check">Brillo intenso y larga duración (2–4 semanas)</span>
-            <span class="acc-check">Contorno limpio y esmaltado uniforme</span>
-            <span class="acc-check">Alta resistencia sin levantamientos</span>
-            <span class="acc-check">Técnica profesional e higiene estricta</span>
-          </div>
-          <p style="color:var(--ink);font-size:0.82rem;font-weight:700;margin-bottom:8px;">Servicios:</p>
-          <ul style="list-style:none;margin:0 0 12px;display:flex;flex-direction:column;gap:5px;">
-            <li style="font-size:0.83rem;color:var(--ink-soft);">• Manicura semipermanente</li>
-            <li style="font-size:0.83rem;color:var(--ink-soft);">• Pedicura completa + spa</li>
-            <li style="font-size:0.83rem;color:var(--ink-soft);">• Uñas acrílicas / acrygel (refuerzo o alargamiento)</li>
-          </ul>
-          <p style="color:var(--ink);font-size:0.82rem;font-weight:700;margin-bottom:6px;">Qué incluye:</p>
-          <p style="color:var(--ink-soft);font-size:0.82rem;margin-bottom:12px;">Preparación → Cutículas → Esmaltado → Sellado → Acabado profesional</p>
-          <p style="font-size:0.82rem;color:var(--brand-dark);font-style:italic;margin-bottom:4px;">👤 Ideal si buscas uñas perfectas sin retoques constantes</p>
-          <p style="font-size:0.81rem;color:var(--ink-soft);">⏱ 40–75 min</p>
-        </div></div>
-      </div>
-
-      <!-- Uñas acrílicas -->
-      <div style="margin-bottom:8px;">
-        <button class="svc-accordion-toggle" data-body="acc-unas-body" aria-expanded="false"><span class="acc-label">Uñas acrílicas, gel y acrigel</span><span class="acc-arrow">→</span></button>
-        <div class="svc-accordion-body" id="acc-unas-body"><div class="svc-accordion-body-inner">
-          <p class="acc-title">💎 Uñas acrílicas, gel y acrigel en Málaga</p>
-          <p class="acc-desc">Uñas resistentes, elegantes y personalizadas con técnicas profesionales y acabados duraderos.</p>
-          <div class="acc-checkmarks" style="margin-bottom:14px;">
-            <span class="acc-check">Diseños adaptados a tu estilo</span>
-            <span class="acc-check">Alta durabilidad y resistencia</span>
-            <span class="acc-check">Acabado natural o creativo</span>
-            <span class="acc-check">Higiene y técnica profesional</span>
-          </div>
-          <p style="color:var(--ink);font-size:0.82rem;font-weight:700;margin-bottom:8px;">Tipos:</p>
-          <ul style="list-style:none;margin:0 0 12px;display:flex;flex-direction:column;gap:5px;">
-            <li style="font-size:0.83rem;color:var(--ink-soft);"><strong style="color:var(--ink);">Acrílicas</strong> → máxima resistencia</li>
-            <li style="font-size:0.83rem;color:var(--ink-soft);"><strong style="color:var(--ink);">Gel</strong> → acabado natural</li>
-            <li style="font-size:0.83rem;color:var(--ink-soft);"><strong style="color:var(--ink);">Acrygel</strong> → equilibrio entre flexibilidad y duración</li>
-          </ul>
-          <p style="color:var(--ink);font-size:0.82rem;font-weight:700;margin-bottom:8px;">Precios desde:</p>
-          <ul class="acc-price-list">
-            <li><span class="brand-name">S–M</span><span class="price">39,90€</span></li>
-            <li><span class="brand-name">L</span><span class="price">45,80€</span></li>
-            <li><span class="brand-name">Relleno</span><span class="price">29,90€</span></li>
-          </ul>
-          <p style="color:var(--ink);font-size:0.82rem;font-weight:700;margin-bottom:6px;">Proceso:</p>
-          <p style="color:var(--ink-soft);font-size:0.82rem;margin-bottom:12px;">Asesoramiento → Preparación → Aplicación → Diseño → Sellado</p>
-          <p style="font-size:0.82rem;color:var(--brand-dark);font-style:italic;">👤 Ideal si buscas uñas largas, fuertes y con diseño personalizado</p>
-        </div></div>
-      </div>
-
-      <!-- Depilación de Cejas con Hilo -->
-      <div style="margin-bottom:8px;">
-        <button class="svc-accordion-toggle" data-body="acc-depil-hilo-body" aria-expanded="false"><span class="acc-label">Depilación de Cejas con Hilo</span><span class="acc-arrow">→</span></button>
-        <div class="svc-accordion-body" id="acc-depil-hilo-body"><div class="svc-accordion-body-inner">
-          <p class="acc-title">🧵 Depilación de cejas con hilo en Málaga</p>
-          <p class="acc-desc">Diseño preciso que realza tu mirada sin irritación, ideal para pieles sensibles y resultados naturales.</p>
-          <div class="acc-checkmarks" style="margin-bottom:14px;">
-            <span class="acc-check">Máxima precisión en el diseño</span>
-            <span class="acc-check">Sin rojeces ni agresión</span>
-            <span class="acc-check">Vello eliminado desde la raíz</span>
-            <span class="acc-check">Resultado limpio y duradero</span>
-          </div>
-          <p style="color:var(--ink);font-size:0.82rem;font-weight:700;margin-bottom:6px;">Qué incluye:</p>
-          <p style="color:var(--ink-soft);font-size:0.82rem;margin-bottom:12px;">Diagnóstico → Diseño personalizado → Depilación con hilo → Ajustes finales</p>
-          <p style="font-size:0.82rem;color:var(--brand-dark);font-style:italic;margin-bottom:6px;">👤 Ideal para cejas pobladas, irregulares o piel sensible</p>
-          <p style="font-size:0.81rem;color:var(--ink-soft);margin-bottom:4px;">⏱ Servicio rápido, resultado inmediato &nbsp;|&nbsp; 🔁 Mantenimiento según crecimiento</p>
-          <p style="font-size:0.81rem;color:var(--ink-soft);">✨ Combinable con tinte, laminado o limpieza facial</p>
-        </div></div>
-      </div>
-
-      <!-- Tratamientos Faciales -->
-      <div style="margin-bottom:8px;">
-        <button class="svc-accordion-toggle" data-body="acc-trat-faciales-body" aria-expanded="false"><span class="acc-label">Tratamientos Faciales</span><span class="acc-arrow">→</span></button>
-        <div class="svc-accordion-body" id="acc-trat-faciales-body"><div class="svc-accordion-body-inner">
-          <p class="acc-title">✨ Tratamientos faciales en Málaga</p>
-          <p class="acc-desc">Mejora tu piel desde la primera sesión con protocolos personalizados según poros, manchas, textura o luminosidad.</p>
-          <div class="acc-checkmarks" style="margin-bottom:14px;">
-            <span class="acc-check">Diagnóstico adaptado a tu piel</span>
-            <span class="acc-check">Resultados visibles desde el primer día</span>
-            <span class="acc-check">Mejora progresiva y natural</span>
-            <span class="acc-check">Tratamientos combinables según objetivo</span>
-          </div>
-          <p style="color:var(--ink);font-size:0.82rem;font-weight:700;margin-bottom:8px;">Servicios desde:</p>
-          <ul class="acc-price-list">
-            <li><span class="brand-name">Limpieza facial</span><span class="price">37,50€</span></li>
-            <li><span class="brand-name">HydraFacial</span><span class="price">49,00€</span></li>
-            <li><span class="brand-name">Dermapen</span><span class="price">69,00€</span></li>
-            <li><span class="brand-name">BB Glow</span><span class="price">140,00€</span></li>
-            <li><span class="brand-name">BB Lips</span><span class="price">69,00€</span></li>
-          </ul>
-          <p style="color:var(--ink);font-size:0.82rem;font-weight:700;margin-bottom:8px;">Bonos:</p>
-          <ul class="acc-price-list">
-            <li><span class="brand-name">HydraFacial (4+1)</span><span class="price">196,00€</span></li>
-            <li><span class="brand-name">Dermapen (4+1)</span><span class="price">276,00€</span></li>
-          </ul>
-          <p style="font-size:0.82rem;color:var(--brand-dark);font-style:italic;margin-bottom:4px;">👤 Ideal para acné, poros, manchas o piel apagada</p>
-          <p style="font-size:0.82rem;color:var(--ink-soft);">✨ El tratamiento correcto cambia tu piel</p>
-        </div></div>
-      </div>
-
-      <!-- Laminado de cejas -->
-      <div style="margin-bottom:8px;">
-        <button class="svc-accordion-toggle" data-body="acc-laminado-body" aria-expanded="false"><span class="acc-label">Laminado de cejas</span><span class="acc-arrow">→</span></button>
-        <div class="svc-accordion-body" id="acc-laminado-body"><div class="svc-accordion-body-inner">
-          <p class="acc-title">✨ Laminado de cejas en Málaga</p>
-          <p class="acc-desc">Ordena, fija y define tus cejas para un efecto lifting natural, con más volumen y simetría sin maquillaje.</p>
-          <div class="acc-checkmarks" style="margin-bottom:14px;">
-            <span class="acc-check">Efecto lifting inmediato</span>
-            <span class="acc-check">Más densidad y forma definida</span>
-            <span class="acc-check">Corrige huecos y asimetrías</span>
-            <span class="acc-check">Acabado natural y pulido</span>
-          </div>
-          <p style="color:var(--ink);font-size:0.82rem;font-weight:700;margin-bottom:6px;">Cómo trabajamos:</p>
-          <p style="color:var(--ink-soft);font-size:0.82rem;margin-bottom:12px;">Diagnóstico → Aplicación → Alineado → Sellado → Hidratación</p>
-          <p style="font-size:0.82rem;color:var(--brand-dark);font-style:italic;margin-bottom:6px;">👤 Ideal para cejas rebeldes, finas o sin forma</p>
-          <p style="font-size:0.81rem;color:var(--ink-soft);">⏳ Duración 5–7 semanas &nbsp;|&nbsp; ✨ Combinable con depilación con hilo</p>
-        </div></div>
-      </div>
-
-      <!-- HydraFacial -->
-      <div style="margin-bottom:8px;">
-        <button class="svc-accordion-toggle" data-body="acc-hydrafacial-body" aria-expanded="false"><span class="acc-label">HydraFacial | Limpieza Facial Profunda</span><span class="acc-arrow">→</span></button>
-        <div class="svc-accordion-body" id="acc-hydrafacial-body"><div class="svc-accordion-body-inner">
-          <p class="acc-title">💧 HydraFacial en Málaga</p>
-          <p class="acc-desc">Limpieza facial profunda que limpia, exfolia e hidrata sin agredir la piel, con glow inmediato desde la primera sesión.</p>
-          <div class="acc-checkmarks" style="margin-bottom:14px;">
-            <span class="acc-check">Limpieza profunda de poros</span>
-            <span class="acc-check">Hidratación y luminosidad instantánea</span>
-            <span class="acc-check">Mejora textura y tono</span>
-            <span class="acc-check">Sin irritación ni descamación</span>
-          </div>
-          <p style="color:var(--ink);font-size:0.82rem;font-weight:700;margin-bottom:6px;">Qué incluye:</p>
-          <p style="color:var(--ink-soft);font-size:0.82rem;margin-bottom:12px;">Diagnóstico → Limpieza → Exfoliación → Hidratación personalizada</p>
-          <p style="font-size:0.82rem;color:var(--brand-dark);font-style:italic;margin-bottom:6px;">👤 Ideal para piel apagada, poros visibles o textura irregular</p>
-          <p style="font-size:0.81rem;color:var(--ink-soft);margin-bottom:4px;">⏱ Sin recuperación &nbsp;|&nbsp; 🔁 Recomendado 1 vez al mes</p>
-          <p style="font-size:0.81rem;color:var(--ink-soft);">💶 49€ (precio lanzamiento) &nbsp;|&nbsp; ✨ Extras opcionales: ampollas, exosomas</p>
-        </div></div>
-      </div>
-
-      <!-- Dermapen Facial -->
-      <div style="margin-bottom:8px;">
-        <button class="svc-accordion-toggle" data-body="acc-dermapen-body" aria-expanded="false"><span class="acc-label">Dermapen Facial</span><span class="acc-arrow">→</span></button>
-        <div class="svc-accordion-body" id="acc-dermapen-body"><div class="svc-accordion-body-inner">
-          <p class="acc-title">✨ Dermapen en Málaga</p>
-          <p class="acc-desc">Microneedling profesional que mejora manchas, poros, cicatrices y textura, activando colágeno para una piel más lisa y luminosa.</p>
-          <div class="acc-checkmarks" style="margin-bottom:14px;">
-            <span class="acc-check">Mejora manchas y tono desigual</span>
-            <span class="acc-check">Reduce poros y cicatrices de acné</span>
-            <span class="acc-check">Aumenta firmeza y luminosidad</span>
-            <span class="acc-check">Resultados progresivos y naturales</span>
-          </div>
-          <p style="color:var(--ink);font-size:0.82rem;font-weight:700;margin-bottom:6px;">Cómo trabajamos:</p>
-          <p style="color:var(--ink-soft);font-size:0.82rem;margin-bottom:8px;">Diagnóstico → Microneedling → Activos personalizados → Mascarilla calmante</p>
-          <p style="color:var(--ink);font-size:0.82rem;font-weight:700;margin-bottom:6px;">Activos:</p>
-          <p style="color:var(--ink-soft);font-size:0.82rem;margin-bottom:12px;">Vitamina C · Proteoglicanos · Péptidos · Exosomas (opcional)</p>
-          <p style="font-size:0.82rem;color:var(--brand-dark);font-style:italic;margin-bottom:8px;">👤 Ideal para piel apagada, poros visibles o marcas de acné</p>
-          <ul class="acc-price-list">
-            <li><span class="brand-name">Sesión individual</span><span class="price">desde 49€</span></li>
-            <li><span class="brand-name">Bono 5 sesiones</span><span class="price">196€</span></li>
-            <li><span class="brand-name">Dermapen con exosomas</span><span class="price">110–120€</span></li>
-          </ul>
-          <p style="font-size:0.81rem;color:var(--ink-soft);">⏱ Leve enrojecimiento temporal &nbsp;|&nbsp; 🔁 Recomendado 3–6 sesiones</p>
-        </div></div>
-      </div>
-
-      <!-- Micropigmentación -->
-      <div style="margin-bottom:8px;">
-        <button class="svc-accordion-toggle" data-body="acc-micropig-body" aria-expanded="false"><span class="acc-label">Micropigmentación de Cejas, Ojos y Labios</span><span class="acc-arrow">→</span></button>
-        <div class="svc-accordion-body" id="acc-micropig-body"><div class="svc-accordion-body-inner">
-          <p class="acc-title">🎯 Micropigmentación en Málaga</p>
-          <p class="acc-desc">Define y mejora cejas, labios u ojos con un resultado natural, duradero y adaptado a tu rostro.</p>
-          <div class="acc-checkmarks" style="margin-bottom:14px;">
-            <span class="acc-check">Diseño previo personalizado</span>
-            <span class="acc-check">Resultado natural y armonioso</span>
-            <span class="acc-check">Más definición sin maquillaje diario</span>
-            <span class="acc-check">Retoque para perfeccionar el resultado</span>
-          </div>
-          <p style="color:var(--ink);font-size:0.82rem;font-weight:700;margin-bottom:8px;">Zonas:</p>
-          <ul style="list-style:none;margin:0 0 12px;display:flex;flex-direction:column;gap:5px;">
-            <li style="font-size:0.83rem;color:var(--ink-soft);"><strong style="color:var(--ink);">Cejas</strong> → forma y densidad natural</li>
-            <li style="font-size:0.83rem;color:var(--ink-soft);"><strong style="color:var(--ink);">Labios</strong> → color y contorno uniforme</li>
-            <li style="font-size:0.83rem;color:var(--ink-soft);"><strong style="color:var(--ink);">Ojos</strong> → mirada definida y expresiva</li>
-          </ul>
-          <p style="color:var(--ink);font-size:0.82rem;font-weight:700;margin-bottom:6px;">Cómo trabajamos:</p>
-          <p style="color:var(--ink-soft);font-size:0.82rem;margin-bottom:12px;">Diagnóstico → Diseño → Aplicación → Retoque</p>
-          <p style="font-size:0.82rem;color:var(--brand-dark);font-style:italic;margin-bottom:4px;">👤 Ideal si buscas mejorar tu expresión sin maquillaje</p>
-          <p style="font-size:0.81rem;color:var(--ink-soft);">⏱ Proceso personalizado según zona &nbsp;|&nbsp; ✨ Resultado progresivo y duradero</p>
-        </div></div>
-      </div>
-
-      <!-- Depilación de Cejas -->
-      <div style="margin-bottom:8px;">
-        <button class="svc-accordion-toggle" data-body="acc-depil-cejas-body" aria-expanded="false"><span class="acc-label">Depilación de Cejas</span><span class="acc-arrow">→</span></button>
-        <div class="svc-accordion-body" id="acc-depil-cejas-body"><div class="svc-accordion-body-inner">
-          <p class="acc-title">👁️ Depilación de cejas en Málaga</p>
-          <p class="acc-desc">Diseño y perfilado que realza tu mirada con un acabado natural, limpio y sin irritación.</p>
-          <div class="acc-checkmarks" style="margin-bottom:14px;">
-            <span class="acc-check">Estudio facial personalizado</span>
-            <span class="acc-check">Cera tibia + pinza de precisión</span>
-            <span class="acc-check">Cejas simétricas y naturales</span>
-            <span class="acc-check">Resultado duradero sin rojeces</span>
-          </div>
-          <p style="color:var(--ink);font-size:0.82rem;font-weight:700;margin-bottom:6px;">Proceso:</p>
-          <p style="color:var(--ink-soft);font-size:0.82rem;margin-bottom:12px;">Análisis → Depilación → Retoque → Hidratación</p>
-          <p style="font-size:0.82rem;color:var(--brand-dark);font-style:italic;margin-bottom:6px;">👤 Para mujeres y hombres</p>
-          <p style="font-size:0.81rem;color:var(--ink-soft);">⏱ 15–20 min &nbsp;|&nbsp; 🔁 Cada 3–4 semanas &nbsp;|&nbsp; ✨ Mejora tu expresión con unas cejas bien diseñadas</p>
-        </div></div>
-      </div>
-
-      <div style="margin-top:32px;display:flex;gap:12px;flex-wrap:wrap;justify-content:center;">
-        <a href="https://booksy.com/es-es/55089_grupo-almagro_peluqueria_29485_malaga?do=invite#ba_s=dl_1" target="_blank" rel="noopener" class="btn-reserva" style="background:var(--brand);box-shadow:0 4px 20px rgba(148,154,0,0.32);">
-          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
-          Reservar en Booksy
-        </a>
-        <a href="https://wa.me/34619860275?text=Hola%2C%20quiero%20reservar%20cita%20en%20Grupo%20Almagro%20(Calle%20Malpica%207%2C%2029002%20M%C3%A1laga).%20%C2%BFPuedes%20asesorarme%3F" target="_blank" rel="noopener" class="btn-reserva" style="background:#25D366;box-shadow:0 4px 20px rgba(37,211,102,0.35);">
-          <svg width="15" height="15" viewBox="0 0 32 32" fill="none"><path fill="#fff" d="M16 2C8.268 2 2 8.268 2 16c0 2.492.648 4.832 1.782 6.862L2 30l7.338-1.754A13.94 13.94 0 0 0 16 30c7.732 0 14-6.268 14-14S23.732 2 16 2z"/><path fill="#25D366" d="M16 4.5c-6.351 0-11.5 5.149-11.5 11.5 0 2.173.608 4.203 1.663 5.934l.258.428-1.094 3.992 4.1-1.074.415.247A11.45 11.45 0 0 0 16 27.5c6.351 0 11.5-5.149 11.5-11.5S22.351 4.5 16 4.5z"/><path fill="#fff" fill-rule="evenodd" d="M12.17 10.5c-.28-.624-.574-.637-.84-.648-.218-.01-.467-.009-.716-.009-.25 0-.655.094-.998.468-.343.375-1.31 1.28-1.31 3.12 0 1.84 1.341 3.619 1.528 3.869.187.25 2.593 4.148 6.4 5.648 3.167 1.249 3.808 1.001 4.494.938.687-.062 2.217-.906 2.53-1.78.312-.875.312-1.624.218-1.78-.093-.156-.343-.25-.716-.437-.374-.188-2.217-1.094-2.56-1.219-.344-.125-.593-.187-.843.188-.25.374-.967 1.218-1.185 1.468-.218.25-.437.281-.81.094-.375-.188-1.582-.583-3.014-1.86-1.114-.993-1.866-2.219-2.084-2.594-.218-.375-.023-.578.164-.764.168-.168.375-.437.562-.656.188-.218.25-.375.375-.625.124-.25.062-.469-.032-.656-.093-.188-.827-2.04-1.163-2.777z"/></svg>
-          WhatsApp
-        </a>
-      </div>
+      <a href="/manicura-en-malaga" style="text-decoration:none;"><div class="svc-page-card"><div class="svc-page-icon">💅</div><h3 style="font-family:'Cormorant Garamond',serif;font-size:1.3rem;font-weight:700;color:var(--ink);margin-bottom:8px;">Manicura</h3><p style="color:var(--ink-soft);font-size:0.84rem;line-height:1.65;margin-bottom:16px;">Semipermanente, clásica y spa. Uñas impecables durante semanas. Desde 14€.</p><span class="svc-page-link">Ver servicio →</span></div></a>
+      <a href="/pedicura-en-malaga" style="text-decoration:none;"><div class="svc-page-card"><div class="svc-page-icon">🦶</div><h3 style="font-family:'Cormorant Garamond',serif;font-size:1.3rem;font-weight:700;color:var(--ink);margin-bottom:8px;">Pedicura</h3><p style="color:var(--ink-soft);font-size:0.84rem;line-height:1.65;margin-bottom:16px;">Pedicura spa, semipermanente y clásica. Pies suaves y cuidados. Desde 18€.</p><span class="svc-page-link">Ver servicio →</span></div></a>
+      <a href="/manicura-semipermanente-y-pedicura-profesional-en-malaga" style="text-decoration:none;"><div class="svc-page-card"><div class="svc-page-icon">✨</div><h3 style="font-family:'Cormorant Garamond',serif;font-size:1.3rem;font-weight:700;color:var(--ink);margin-bottom:8px;">Mani + Pedi Semipermanente</h3><p style="color:var(--ink-soft);font-size:0.84rem;line-height:1.65;margin-bottom:16px;">Brillo duradero en manos y pies. Pack completo. Desde 48€.</p><span class="svc-page-link">Ver servicio →</span></div></a>
+      <a href="/unas-acrilicas-gel-y-acrigel-en-malaga" style="text-decoration:none;"><div class="svc-page-card"><div class="svc-page-icon">💎</div><h3 style="font-family:'Cormorant Garamond',serif;font-size:1.3rem;font-weight:700;color:var(--ink);margin-bottom:8px;">Uñas Acrílicas, Gel y Acrigel</h3><p style="color:var(--ink-soft);font-size:0.84rem;line-height:1.65;margin-bottom:16px;">Resistentes y elegantes. Desde S–M 39,90€. Relleno 29,90€.</p><span class="svc-page-link">Ver servicio →</span></div></a>
+      <a href="/depilacion-de-cejas-con-hilo-en-malaga-diseno-preciso-y-sin-irritacion" style="text-decoration:none;"><div class="svc-page-card"><div class="svc-page-icon">🧵</div><h3 style="font-family:'Cormorant Garamond',serif;font-size:1.3rem;font-weight:700;color:var(--ink);margin-bottom:8px;">Depilación Cejas con Hilo</h3><p style="color:var(--ink-soft);font-size:0.84rem;line-height:1.65;margin-bottom:16px;">Diseño preciso y sin irritación. Ideal piel sensible. Desde 8€.</p><span class="svc-page-link">Ver servicio →</span></div></a>
+      <a href="/tratamientos-faciales-en-malaga" style="text-decoration:none;"><div class="svc-page-card"><div class="svc-page-icon">🌿</div><h3 style="font-family:'Cormorant Garamond',serif;font-size:1.3rem;font-weight:700;color:var(--ink);margin-bottom:8px;">Tratamientos Faciales</h3><p style="color:var(--ink-soft);font-size:0.84rem;line-height:1.65;margin-bottom:16px;">Limpieza, HydraFacial, Dermapen, BB Glow y más. Desde 37,50€.</p><span class="svc-page-link">Ver servicio →</span></div></a>
+      <a href="/laminado-de-cejas-en-malaga" style="text-decoration:none;"><div class="svc-page-card"><div class="svc-page-icon">✨</div><h3 style="font-family:'Cormorant Garamond',serif;font-size:1.3rem;font-weight:700;color:var(--ink);margin-bottom:8px;">Laminado de Cejas</h3><p style="color:var(--ink-soft);font-size:0.84rem;line-height:1.65;margin-bottom:16px;">Efecto lifting natural, más volumen y forma. Dura 5–7 semanas. Desde 35€.</p><span class="svc-page-link">Ver servicio →</span></div></a>
+      <a href="/hydrafacial-en-malaga-limpieza-facial-profunda-y-glow-inmediato" style="text-decoration:none;"><div class="svc-page-card"><div class="svc-page-icon">💧</div><h3 style="font-family:'Cormorant Garamond',serif;font-size:1.3rem;font-weight:700;color:var(--ink);margin-bottom:8px;">HydraFacial</h3><p style="color:var(--ink-soft);font-size:0.84rem;line-height:1.65;margin-bottom:16px;">Limpieza facial profunda con glow inmediato. Sin recuperación. Desde 49€.</p><span class="svc-page-link">Ver servicio →</span></div></a>
+      <a href="/dermapen-en-malaga" style="text-decoration:none;"><div class="svc-page-card"><div class="svc-page-icon">✨</div><h3 style="font-family:'Cormorant Garamond',serif;font-size:1.3rem;font-weight:700;color:var(--ink);margin-bottom:8px;">Dermapen</h3><p style="color:var(--ink-soft);font-size:0.84rem;line-height:1.65;margin-bottom:16px;">Microneedling para manchas, poros y textura. Desde 49€. Bono 4+1.</p><span class="svc-page-link">Ver servicio →</span></div></a>
+      <a href="/micropigmentacion-en-malaga-cejas-ojos-y-labios" style="text-decoration:none;"><div class="svc-page-card"><div class="svc-page-icon">🎯</div><h3 style="font-family:'Cormorant Garamond',serif;font-size:1.3rem;font-weight:700;color:var(--ink);margin-bottom:8px;">Micropigmentación</h3><p style="color:var(--ink-soft);font-size:0.84rem;line-height:1.65;margin-bottom:16px;">Cejas, ojos y labios definidos sin maquillaje. Resultado natural y duradero.</p><span class="svc-page-link">Ver servicio →</span></div></a>
+      <a href="/depilacion-de-cejas-en-malaga" style="text-decoration:none;"><div class="svc-page-card"><div class="svc-page-icon">👁️</div><h3 style="font-family:'Cormorant Garamond',serif;font-size:1.3rem;font-weight:700;color:var(--ink);margin-bottom:8px;">Depilación de Cejas</h3><p style="color:var(--ink-soft);font-size:0.84rem;line-height:1.65;margin-bottom:16px;">Diseño que realza tu mirada con cera tibia y pinza. Desde 8€.</p><span class="svc-page-link">Ver servicio →</span></div></a>
+      <a href="/hifu-facial-en-malaga-lifting-sin-cirugia-y-efecto-tensor" style="text-decoration:none;"><div class="svc-page-card"><div class="svc-page-icon">⚡</div><h3 style="font-family:'Cormorant Garamond',serif;font-size:1.3rem;font-weight:700;color:var(--ink);margin-bottom:8px;">HIFU Facial</h3><p style="color:var(--ink-soft);font-size:0.84rem;line-height:1.65;margin-bottom:16px;">Lifting sin cirugía. Efecto tensor y reafirmante duradero. Desde 180€.</p><span class="svc-page-link">Ver servicio →</span></div></a>
+      <a href="/depilacion-laser-trilaser-en-malaga-centro" style="text-decoration:none;"><div class="svc-page-card"><div class="svc-page-icon">🔆</div><h3 style="font-family:'Cormorant Garamond',serif;font-size:1.3rem;font-weight:700;color:var(--ink);margin-bottom:8px;">Depilación Láser Trilaser</h3><p style="color:var(--ink-soft);font-size:0.84rem;line-height:1.65;margin-bottom:16px;">Tecnología trilaser para todos los fototipos. Resultados permanentes.</p><span class="svc-page-link">Ver servicio →</span></div></a>
+    </div>
+    <div style="margin-top:40px;display:flex;gap:12px;flex-wrap:wrap;justify-content:center;">
+      <a href="https://booksy.com/es-es/55089_grupo-almagro_peluqueria_29485_malaga?do=invite#ba_s=dl_1" target="_blank" rel="noopener" class="btn-primary">Reservar cita</a>
     </div>
   </div>
 </section>
+
 
 
 <!-- CTA BANNER -->
