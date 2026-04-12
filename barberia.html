@@ -233,6 +233,11 @@
     .acc-check { color: var(--ink-soft); font-size: 0.83rem; display: flex; align-items: center; gap: 6px; }
     .acc-check::before { content: '✔'; color: var(--brand); font-size: 0.78rem; flex-shrink: 0; }
     .btn-reserva:active { transform: translateY(0); }
+  .svc-page-card { background:#fff; border:1px solid rgba(0,0,0,0.07); border-radius:20px; padding:28px 24px; box-shadow:0 2px 14px rgba(148,154,0,0.06); transition:transform 0.3s cubic-bezier(0.34,1.56,0.64,1),box-shadow 0.3s; height:100%; }
+  .svc-page-card:hover { transform:translateY(-5px); box-shadow:0 8px 28px rgba(148,154,0,0.14); }
+  .svc-page-icon { font-size:2rem; margin-bottom:16px; }
+  .svc-page-link { color:var(--brand); font-size:0.84rem; font-weight:600; }
+  @media (max-width:768px) { .svc-page-card { padding:20px; } }
   </style>
 </head>
 <body>
@@ -316,144 +321,15 @@
       <p style="color:var(--ink-soft);font-size:0.95rem;line-height:1.75;max-width:500px;margin:0 auto;">Cada cliente es único. Técnica, precisión y el acabado que mejor te favorece.</p>
     </div>
 
-    <div class="svc-card">
-      <div style="display:flex;align-items:center;gap:14px;margin-bottom:28px;padding-bottom:20px;border-bottom:1px solid rgba(0,0,0,0.06);">
-        <div style="width:44px;height:44px;background:var(--brand-xlight);border-radius:12px;flex-shrink:0;display:flex;align-items:center;justify-content:center;">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#949a00" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="6" r="3"/><circle cx="18" cy="6" r="3"/><path d="M8.46 8.46 18 18M15.54 8.46 6 18"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="18" r="3"/></svg>
-        </div>
-        <div>
-          <p style="font-family:'Cormorant Garamond',serif;font-size:1.3rem;font-weight:700;color:var(--ink);line-height:1.2;">Barbería</p>
-          <p style="color:var(--ink-soft);font-size:0.83rem;margin-top:2px;">Corte masculino, precisión y acabado limpio.</p>
-        </div>
-      </div>
-
-      <!-- Corte Caballero -->
-      <div style="margin-bottom:8px;">
-        <button class="svc-accordion-toggle" data-body="acc-corte-cab-body" aria-expanded="false"><span class="acc-label">Corte Caballero</span><span class="acc-arrow">→</span></button>
-        <div class="svc-accordion-body" id="acc-corte-cab-body"><div class="svc-accordion-body-inner">
-          <p class="acc-title">✂️ Corte de caballero en Málaga</p>
-          <p class="acc-desc">Corte moderno, limpio y duradero (fade, degradado o clásico), adaptado a tu rostro y tipo de cabello.</p>
-          <div class="acc-checkmarks" style="margin-bottom:14px;">
-            <span class="acc-check">Asesoramiento personalizado</span>
-            <span class="acc-check">Transiciones limpias y contornos precisos</span>
-            <span class="acc-check">Acabado pulido listo para salir</span>
-            <span class="acc-check">Fácil mantenimiento en el tiempo</span>
-          </div>
-          <p style="color:var(--ink);font-size:0.82rem;font-weight:700;margin-bottom:8px;">Tipos de corte:</p>
-          <ul style="list-style:none;margin:0 0 12px;display:flex;flex-direction:column;gap:5px;">
-            <li style="font-size:0.83rem;color:var(--ink-soft);"><strong style="color:var(--ink);">Clásico</strong> → elegante y natural</li>
-            <li style="font-size:0.83rem;color:var(--ink-soft);"><strong style="color:var(--ink);">Moderno</strong> → textura y movimiento</li>
-            <li style="font-size:0.83rem;color:var(--ink-soft);"><strong style="color:var(--ink);">Fade / degradado</strong> → limpio y definido</li>
-            <li style="font-size:0.83rem;color:var(--ink-soft);"><strong style="color:var(--ink);">Contornos</strong> → detalle y precisión</li>
-          </ul>
-          <p style="color:var(--ink);font-size:0.82rem;font-weight:700;margin-bottom:6px;">Cómo trabajamos:</p>
-          <p style="color:var(--ink-soft);font-size:0.82rem;margin-bottom:12px;">Diagnóstico → Diseño → Ejecución precisa → Acabado + consejos</p>
-          <p style="font-size:0.82rem;color:var(--brand-dark);font-style:italic;">👤 Ideal si buscas un corte que te favorezca y se mantenga impecable semanas</p>
-        </div></div>
-      </div>
-
-      <!-- Mechas para Caballeros -->
-      <div style="margin-bottom:8px;">
-        <button class="svc-accordion-toggle" data-body="acc-mechas-cab-body" aria-expanded="false"><span class="acc-label">Mechas para Caballeros</span><span class="acc-arrow">→</span></button>
-        <div class="svc-accordion-body" id="acc-mechas-cab-body"><div class="svc-accordion-body-inner">
-          <p class="acc-title">✨ Mechas para caballeros en Málaga</p>
-          <p class="acc-desc">Iluminación natural y masculina que aporta estilo, volumen y dimensión sin cambiar radicalmente tu look.</p>
-          <div class="acc-checkmarks" style="margin-bottom:14px;">
-            <span class="acc-check">Técnicas personalizadas (babylights, sun kissed, aclarados suaves)</span>
-            <span class="acc-check">Resultado natural, sin efecto artificial</span>
-            <span class="acc-check">Tonalización anti-amarillo + hidratación</span>
-            <span class="acc-check">Asesoramiento según rostro, piel y estilo</span>
-          </div>
-          <p style="color:var(--ink);font-size:0.82rem;font-weight:700;margin-bottom:6px;">Qué incluye:</p>
-          <p style="color:var(--ink-soft);font-size:0.82rem;margin-bottom:12px;">Diagnóstico → Aplicación profesional → Tonalizado → Tratamiento brillo → Peinado final</p>
-          <p style="color:var(--ink);font-size:0.82rem;font-weight:700;margin-bottom:8px;">Resultados:</p>
-          <ul style="list-style:none;margin:0 0 12px;display:flex;flex-direction:column;gap:5px;">
-            <li style="font-size:0.83rem;color:var(--ink-soft);">• Más luz y volumen</li>
-            <li style="font-size:0.83rem;color:var(--ink-soft);">• Look cuidado y profesional</li>
-            <li style="font-size:0.83rem;color:var(--ink-soft);">• Mantenimiento sencillo (retoque cada 10–12 semanas)</li>
-          </ul>
-          <p style="font-size:0.82rem;color:var(--brand-dark);font-style:italic;margin-bottom:6px;">👤 Ideal si quieres mejorar tu imagen sin perder naturalidad</p>
-          <p style="font-size:0.81rem;color:var(--ink-soft);">⏱ 60–90 min &nbsp;|&nbsp; 💈 Combinable con corte</p>
-        </div></div>
-      </div>
-
-      <!-- Permanente Caballero -->
-      <div style="margin-bottom:8px;">
-        <button class="svc-accordion-toggle" data-body="acc-permanente-cab-body" aria-expanded="false"><span class="acc-label">Permanente Caballero</span><span class="acc-arrow">→</span></button>
-        <div class="svc-accordion-body" id="acc-permanente-cab-body"><div class="svc-accordion-body-inner">
-          <p class="acc-title">🔄 Permanente para caballero en Málaga</p>
-          <p class="acc-desc">Ondas o rizos duraderos que aportan volumen, textura y estilo con un acabado natural y moderno.</p>
-          <div class="acc-checkmarks" style="margin-bottom:14px;">
-            <span class="acc-check">Más volumen y definición</span>
-            <span class="acc-check">Look actual sin peinar con calor a diario</span>
-            <span class="acc-check">Resultado duradero (8–12 semanas)</span>
-            <span class="acc-check">Adaptado a tu tipo de cabello</span>
-          </div>
-          <p style="color:var(--ink);font-size:0.82rem;font-weight:700;margin-bottom:6px;">Cómo trabajamos:</p>
-          <p style="color:var(--ink-soft);font-size:0.82rem;margin-bottom:12px;">Diagnóstico → Protección → Aplicación → Moldeado + calor → Neutralización → Tratamiento final</p>
-          <p style="color:var(--ink);font-size:0.82rem;font-weight:700;margin-bottom:8px;">Mantenimiento:</p>
-          <ul style="list-style:none;margin:0 0 12px;display:flex;flex-direction:column;gap:5px;">
-            <li style="font-size:0.83rem;color:var(--ink-soft);">• Productos suaves (sin sulfatos)</li>
-            <li style="font-size:0.83rem;color:var(--ink-soft);">• Hidratación regular</li>
-            <li style="font-size:0.83rem;color:var(--ink-soft);">• Retoques según crecimiento</li>
-          </ul>
-          <p style="font-size:0.81rem;color:var(--ink-soft);">⏱ Resultado de larga duración &nbsp;|&nbsp; 💶 Desde 35–45€ (según largo y estilo)</p>
-        </div></div>
-      </div>
-
-      <!-- Depilación Cejas Hilo Masculino -->
-      <div style="margin-bottom:8px;">
-        <button class="svc-accordion-toggle" data-body="acc-depil-cejas-masc-body" aria-expanded="false"><span class="acc-label">Depilación Cejas con Hilo Masculino</span><span class="acc-arrow">→</span></button>
-        <div class="svc-accordion-body" id="acc-depil-cejas-masc-body"><div class="svc-accordion-body-inner">
-          <p class="acc-title">🧵 Depilación de cejas con hilo para caballeros</p>
-          <p class="acc-desc">Técnica precisa que elimina el vello desde la raíz sin irritar, logrando un acabado limpio, natural y masculino.</p>
-          <div class="acc-checkmarks" style="margin-bottom:14px;">
-            <span class="acc-check">Sin rojeces ni marcas</span>
-            <span class="acc-check">Limpieza de entrecejo inmediata</span>
-            <span class="acc-check">Diseño natural (sin afinar la ceja)</span>
-            <span class="acc-check">Resultado duradero</span>
-          </div>
-          <p style="color:var(--ink);font-size:0.82rem;font-weight:700;margin-bottom:8px;">Tipos de diseño:</p>
-          <ul style="list-style:none;margin:0 0 12px;display:flex;flex-direction:column;gap:5px;">
-            <li style="font-size:0.83rem;color:var(--ink-soft);">• Limpieza natural</li>
-            <li style="font-size:0.83rem;color:var(--ink-soft);">• Entrecejo + forma</li>
-            <li style="font-size:0.83rem;color:var(--ink-soft);">• Definición lateral</li>
-            <li style="font-size:0.83rem;color:var(--ink-soft);">• Diseño completo</li>
-          </ul>
-          <p style="font-size:0.82rem;color:var(--brand-dark);font-style:italic;margin-bottom:6px;">👤 Ideal para cejas densas o desordenadas</p>
-          <p style="font-size:0.81rem;color:var(--ink-soft);">💶 Desde 10€ &nbsp;|&nbsp; ⏱ Rápido y más suave que la cera &nbsp;|&nbsp; 🔁 Mantenimiento cada 3–5 semanas</p>
-        </div></div>
-      </div>
-
-      <!-- Limpieza facial Caballeros -->
-      <div style="margin-bottom:8px;">
-        <button class="svc-accordion-toggle" data-body="acc-limpieza-cab-body" aria-expanded="false"><span class="acc-label">Limpieza facial Caballeros</span><span class="acc-arrow">→</span></button>
-        <div class="svc-accordion-body" id="acc-limpieza-cab-body"><div class="svc-accordion-body-inner">
-          <p class="acc-title">🧴 Limpieza facial para hombres en Málaga</p>
-          <p class="acc-desc">Tratamiento profundo diseñado para la piel masculina: elimina impurezas, regula grasa y mejora el aspecto del rostro desde la primera sesión.</p>
-          <div class="acc-checkmarks" style="margin-bottom:14px;">
-            <span class="acc-check">Elimina puntos negros e impurezas</span>
-            <span class="acc-check">Reduce grasa y poros visibles</span>
-            <span class="acc-check">Mejora textura y frescura</span>
-            <span class="acc-check">Prepara la piel para el afeitado</span>
-          </div>
-          <p style="color:var(--ink);font-size:0.82rem;font-weight:700;margin-bottom:6px;">Cómo trabajamos:</p>
-          <p style="color:var(--ink-soft);font-size:0.82rem;margin-bottom:12px;">Limpieza → Exfoliación → Extracción → Mascarilla → Hidratación</p>
-          <p style="font-size:0.82rem;color:var(--brand-dark);font-style:italic;margin-bottom:6px;">👤 Ideal para piel grasa, poros visibles o piel apagada</p>
-          <p style="font-size:0.81rem;color:var(--ink-soft);">⏱ 60 min &nbsp;|&nbsp; 🔁 Recomendado cada 4–6 semanas</p>
-        </div></div>
-      </div>
-
-      <div style="margin-top:32px;display:flex;gap:12px;flex-wrap:wrap;justify-content:center;">
-        <a href="https://booksy.com/es-es/55089_grupo-almagro_peluqueria_29485_malaga?do=invite#ba_s=dl_1" target="_blank" rel="noopener" class="btn-reserva" style="background:var(--brand);box-shadow:0 4px 20px rgba(148,154,0,0.32);">
-          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
-          Reservar en Booksy
-        </a>
-        <a href="https://wa.me/34619860275?text=Hola%2C%20quiero%20reservar%20cita%20en%20Grupo%20Almagro%20(Calle%20Malpica%207%2C%2029002%20M%C3%A1laga).%20%C2%BFPuedes%20asesorarme%3F" target="_blank" rel="noopener" class="btn-reserva" style="background:#25D366;box-shadow:0 4px 20px rgba(37,211,102,0.35);">
-          <svg width="15" height="15" viewBox="0 0 32 32" fill="none"><path fill="#fff" d="M16 2C8.268 2 2 8.268 2 16c0 2.492.648 4.832 1.782 6.862L2 30l7.338-1.754A13.94 13.94 0 0 0 16 30c7.732 0 14-6.268 14-14S23.732 2 16 2z"/><path fill="#25D366" d="M16 4.5c-6.351 0-11.5 5.149-11.5 11.5 0 2.173.608 4.203 1.663 5.934l.258.428-1.094 3.992 4.1-1.074.415.247A11.45 11.45 0 0 0 16 27.5c6.351 0 11.5-5.149 11.5-11.5S22.351 4.5 16 4.5z"/><path fill="#fff" fill-rule="evenodd" d="M12.17 10.5c-.28-.624-.574-.637-.84-.648-.218-.01-.467-.009-.716-.009-.25 0-.655.094-.998.468-.343.375-1.31 1.28-1.31 3.12 0 1.84 1.341 3.619 1.528 3.869.187.25 2.593 4.148 6.4 5.648 3.167 1.249 3.808 1.001 4.494.938.687-.062 2.217-.906 2.53-1.78.312-.875.312-1.624.218-1.78-.093-.156-.343-.25-.716-.437-.374-.188-2.217-1.094-2.56-1.219-.344-.125-.593-.187-.843.188-.25.374-.967 1.218-1.185 1.468-.218.25-.437.281-.81.094-.375-.188-1.582-.583-3.014-1.86-1.114-.993-1.866-2.219-2.084-2.594-.218-.375-.023-.578.164-.764.168-.168.375-.437.562-.656.188-.218.25-.375.375-.625.124-.25.062-.469-.032-.656-.093-.188-.827-2.04-1.163-2.777z"/></svg>
-          WhatsApp
-        </a>
-      </div>
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:24px;max-width:1100px;margin:0 auto;">
+      <a href="/corte-caballero-malaga-corte-de-pelo-hombre-profesional" style="text-decoration:none;"><div class="svc-page-card"><div class="svc-page-icon">✂️</div><h3 style="font-family:'Cormorant Garamond',serif;font-size:1.3rem;font-weight:700;color:var(--ink);margin-bottom:8px;">Corte Caballero</h3><p style="color:var(--ink-soft);font-size:0.84rem;line-height:1.65;margin-bottom:16px;">Fade, degradado o clásico. Adaptado a tu rostro y estilo. Desde 18€.</p><span class="svc-page-link">Ver servicio →</span></div></a>
+      <a href="/mechas-para-caballeros-en-malaga-grupo-almagro" style="text-decoration:none;"><div class="svc-page-card"><div class="svc-page-icon">✨</div><h3 style="font-family:'Cormorant Garamond',serif;font-size:1.3rem;font-weight:700;color:var(--ink);margin-bottom:8px;">Mechas para Caballeros</h3><p style="color:var(--ink-soft);font-size:0.84rem;line-height:1.65;margin-bottom:16px;">Babylights, sun kissed y aclarados naturales. Resultado masculino y discreto.</p><span class="svc-page-link">Ver servicio →</span></div></a>
+      <a href="/permanente-caballero-en-malaga" style="text-decoration:none;"><div class="svc-page-card"><div class="svc-page-icon">🔄</div><h3 style="font-family:'Cormorant Garamond',serif;font-size:1.3rem;font-weight:700;color:var(--ink);margin-bottom:8px;">Permanente Caballero</h3><p style="color:var(--ink-soft);font-size:0.84rem;line-height:1.65;margin-bottom:16px;">Ondas y volumen duraderos sin esfuerzo diario. Resultado 8–12 semanas. Desde 35€.</p><span class="svc-page-link">Ver servicio →</span></div></a>
+      <a href="/depilacion-de-cejas-con-hilo-para-hombres-en-malaga-diseno-masculino-y-preciso" style="text-decoration:none;"><div class="svc-page-card"><div class="svc-page-icon">🧵</div><h3 style="font-family:'Cormorant Garamond',serif;font-size:1.3rem;font-weight:700;color:var(--ink);margin-bottom:8px;">Depilación Cejas con Hilo</h3><p style="color:var(--ink-soft);font-size:0.84rem;line-height:1.65;margin-bottom:16px;">Diseño masculino y preciso sin rojeces ni irritación. Desde 10€.</p><span class="svc-page-link">Ver servicio →</span></div></a>
+      <a href="/limpieza-facial-para-hombres-en-malaga-piel-limpia-y-cuidada" style="text-decoration:none;"><div class="svc-page-card"><div class="svc-page-icon">🧴</div><h3 style="font-family:'Cormorant Garamond',serif;font-size:1.3rem;font-weight:700;color:var(--ink);margin-bottom:8px;">Limpieza Facial Caballeros</h3><p style="color:var(--ink-soft);font-size:0.84rem;line-height:1.65;margin-bottom:16px;">Tratamiento profundo para piel masculina. Elimina impurezas y regula grasa. Desde 35€.</p><span class="svc-page-link">Ver servicio →</span></div></a>
+    </div>
+    <div style="margin-top:40px;display:flex;gap:12px;flex-wrap:wrap;justify-content:center;">
+      <a href="https://booksy.com/es-es/55089_grupo-almagro_peluqueria_29485_malaga?do=invite#ba_s=dl_1" target="_blank" rel="noopener" class="btn-primary">Reservar cita</a>
     </div>
   </div>
 </section>

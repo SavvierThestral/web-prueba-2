@@ -11,6 +11,7 @@
     { "src": "/tratamientos-destacados",                                           "dest": "/tratamientos-destacados.html" },
     { "src": "/tratamientos",                                                      "dest": "/tratamientos-destacados.html" },
     { "src": "/tratamientos-destacados-en-malaga-balayage-dermapen-laser-y-cejas", "dest": "/tratamientos-destacados.html" },
+
     { "src": "/mechas-balayage-en-malaga-grupo-almagro",                           "dest": "/mechas-balayage-en-malaga-grupo-almagro.html" },
     { "src": "/corte-de-mujer-en-malaga-peluqueria-femenina-y-estilistas",         "dest": "/corte-de-mujer-en-malaga-peluqueria-femenina-y-estilistas.html" },
     { "src": "/tinte-sin-amoniaco-en-malaga-coloracion-inoa-y-biopygma",           "dest": "/tinte-sin-amoniaco-en-malaga-coloracion-inoa-y-biopygma.html" },
@@ -18,6 +19,26 @@
     { "src": "/tratamientos-capilares-en-malaga-con-diagnostico-personalizado",    "dest": "/tratamientos-capilares-en-malaga-con-diagnostico-personalizado.html" },
     { "src": "/tratamiento-botox-capilar",                                         "dest": "/tratamiento-botox-capilar.html" },
     { "src": "/alisado-permanente-en-malaga-grupo-almagro",                        "dest": "/alisado-permanente-en-malaga-grupo-almagro.html" },
-    { "src": "/recogidos-de-novia-en-malaga",                                      "dest": "/recogidos-de-novia-en-malaga.html" }
+    { "src": "/recogidos-de-novia-en-malaga",                                      "dest": "/recogidos-de-novia-en-malaga.html" },
+
+    { "src": "/corte-caballero-malaga-corte-de-pelo-hombre-profesional",           "dest": "/corte-caballero-malaga-corte-de-pelo-hombre-profesional.html" },
+    { "src": "/mechas-para-caballeros-en-malaga-grupo-almagro",                    "dest": "/mechas-para-caballeros-en-malaga-grupo-almagro.html" },
+    { "src": "/permanente-caballero-en-malaga",                                    "dest": "/permanente-caballero-en-malaga.html" },
+    { "src": "/depilacion-de-cejas-con-hilo-para-hombres-en-malaga-diseno-masculino-y-preciso", "dest": "/depilacion-de-cejas-con-hilo-para-hombres-en-malaga-diseno-masculino-y-preciso.html" },
+    { "src": "/limpieza-facial-para-hombres-en-malaga-piel-limpia-y-cuidada",      "dest": "/limpieza-facial-para-hombres-en-malaga-piel-limpia-y-cuidada.html" },
+
+    { "src": "/manicura-en-malaga",                                                "dest": "/manicura-en-malaga.html" },
+    { "src": "/pedicura-en-malaga",                                                "dest": "/pedicura-en-malaga.html" },
+    { "src": "/manicura-semipermanente-y-pedicura-profesional-en-malaga",          "dest": "/manicura-semipermanente-y-pedicura-profesional-en-malaga.html" },
+    { "src": "/unas-acrilicas-gel-y-acrigel-en-malaga",                            "dest": "/unas-acrilicas-gel-y-acrigel-en-malaga.html" },
+    { "src": "/depilacion-de-cejas-con-hilo-en-malaga-diseno-preciso-y-sin-irritacion", "dest": "/depilacion-de-cejas-con-hilo-en-malaga-diseno-preciso-y-sin-irritacion.html" },
+    { "src": "/tratamientos-faciales-en-malaga",                                   "dest": "/tratamientos-faciales-en-malaga.html" },
+    { "src": "/laminado-de-cejas-en-malaga",                                       "dest": "/laminado-de-cejas-en-malaga.html" },
+    { "src": "/hydrafacial-en-malaga-limpieza-facial-profunda-y-glow-inmediato",    "dest": "/hydrafacial-en-malaga-limpieza-facial-profunda-y-glow-inmediato.html" },
+    { "src": "/dermapen-en-malaga",                                                 "dest": "/dermapen-en-malaga.html" },
+    { "src": "/micropigmentacion-en-malaga-cejas-ojos-y-labios",                   "dest": "/micropigmentacion-en-malaga-cejas-ojos-y-labios.html" },
+    { "src": "/depilacion-de-cejas-en-malaga",                                     "dest": "/depilacion-de-cejas-en-malaga.html" },
+    { "src": "/hifu-facial-en-malaga-lifting-sin-cirugia-y-efecto-tensor",         "dest": "/hifu-facial-en-malaga-lifting-sin-cirugia-y-efecto-tensor.html" },
+    { "src": "/depilacion-laser-trilaser-en-malaga-centro",                        "dest": "/depilacion-laser-trilaser-en-malaga-centro.html" }
   ]
 }
